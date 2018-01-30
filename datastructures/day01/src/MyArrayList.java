@@ -6,19 +6,20 @@ public class MyArrayList {
 
     // TODO: Runtime: O(1)
     public MyArrayList() {
-        new MyArrayList(10);
+        this.size = 0;
+        this.elems = new Cow[10];
     }
 
     // TODO: Runtime: O(1)
     public MyArrayList(int capacity) {
-        size = 0;
-        elems = new Cow[capacity];
+        this.size = 0;
+        this.elems = new Cow[capacity];
     }
 
     // TODO: Runtime: O(1)*
     public void add(Cow c) {
         if (size + 1 == elems.length) {
-            Cow[] temp = new Cow[elems.length * 2];
+            Cow[] temp = new Cow[(elems.length << 1)];
             System.arraycopy(elems, 0, temp, 0, elems.length);
             elems = temp;
         }
@@ -31,14 +32,14 @@ public class MyArrayList {
         return size;
     }
 
-    // TODO: Runtime: O(?)
+    // TODO: Runtime: O(1)
     public Cow get(int index) {
         return elems[index];
     }
 
-    // TODO: Runtime: O(?)
-    public Cow remove(int index) {
-        if (index > size || index < 0){
+    // TODO: Runtime: O(N)*
+    public Cow remove(int index) throws IndexOutOfBoundsException {
+        if (index > size - 1 || index < 0){
             throw new IndexOutOfBoundsException();
         }
         Cow c = elems[index];
@@ -46,8 +47,8 @@ public class MyArrayList {
             elems[i] = elems[i+1];
         }
         size--;
-        if (size < elems.length / 4){
-            Cow[] temp = new Cow[elems.length / 2];
+        if (size < elems.length >> 2){
+            Cow[] temp = new Cow[elems.length >> 1];
             System.arraycopy(elems, 0, temp, 0, size - 1);
             elems = temp;
         }
