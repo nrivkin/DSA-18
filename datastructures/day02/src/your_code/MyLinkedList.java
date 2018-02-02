@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package day02.src.your_code;
+=======
+package your_code;
+>>>>>>> 8caf3730f68ef24e13da03a7002975901d9c77c4
 
 public class MyLinkedList {
 
@@ -25,9 +29,13 @@ public class MyLinkedList {
     }
 
     public MyLinkedList() {
+<<<<<<< HEAD
         this.size = 0;
         this.head = null;
         this.tail = null;
+=======
+        // TODO
+>>>>>>> 8caf3730f68ef24e13da03a7002975901d9c77c4
     }
 
     public int size() {
@@ -47,6 +55,7 @@ public class MyLinkedList {
     }
 
     public void addLast(Chicken c) {
+<<<<<<< HEAD
         Node n = new Node(c, null, null);
         if (size == 0){
             tail = n;
@@ -125,5 +134,32 @@ public class MyLinkedList {
         tail.next = null;
         size--;
         return val;
+=======
+        // TODO
+    }
+
+    public void addFirst(Chicken c) {
+        // TODO
+    }
+
+    public Chicken get(int index) {
+        // TODO
+        return null;
+    }
+
+    public Chicken remove(int index) {
+        // TODO
+        return null;
+    }
+
+    public Chicken removeFirst() {
+        // TODO
+        return null;
+    }
+
+    public Chicken removeLast() {
+        // TODO
+        return null;
+>>>>>>> 8caf3730f68ef24e13da03a7002975901d9c77c4
     }
 }

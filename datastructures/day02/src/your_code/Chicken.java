@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package day02.src.your_code;
+=======
+package your_code;
+>>>>>>> 8caf3730f68ef24e13da03a7002975901d9c77c4
 
 public class Chicken {
 
