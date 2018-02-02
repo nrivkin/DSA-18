@@ -3,8 +3,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import your_code.Chicken;
-import your_code.MyLinkedList;
+import day02.src.your_code.Chicken;
+import day02.src.your_code.MyLinkedList;
 
 public class MyLinkedListTest {
     private static final Chicken DELILAH = new Chicken("Delilah", 10, "blue");

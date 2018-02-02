@@ -2,7 +2,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
-import your_code.MyStack;
+import day02.src.your_code.MyStack;
 
 public class StackTest {
 

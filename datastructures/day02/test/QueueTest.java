@@ -1,8 +1,8 @@
 import ADTs.QueueADT;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import your_code.MyPriorityQueue;
-import your_code.MyQueue;
+import day02.src.your_code.MyPriorityQueue;
+import day02.src.your_code.MyQueue;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -53,7 +53,7 @@ public class QueueTest {
     }
 
     /**
-     * Tests functionality of your_code.MyQueue
+     * Tests functionality of day02.src.your_code.MyQueue
      */
     @Test
     public void testMyQueue() {
@@ -61,7 +61,7 @@ public class QueueTest {
     }
 
     /**
-     * Tests functionality of your_code.MyPriorityQueue
+     * Tests functionality of day02.src.your_code.MyPriorityQueue
      */
     @Test
     public void testPriorityQueue() {
