@@ -2,11 +2,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
-<<<<<<< HEAD
 import day02.src.your_code.MyStack;
-=======
-import your_code.MyStack;
->>>>>>> 8caf3730f68ef24e13da03a7002975901d9c77c4
 
 public class StackTest {
 
@@ -29,11 +25,7 @@ public class StackTest {
     @Test
     public void testStack() {
         stack.push(3);
-<<<<<<< HEAD
-        int e = stack.pop();
-=======
         int e = (int) stack.pop();
->>>>>>> 8caf3730f68ef24e13da03a7002975901d9c77c4
         assertEquals(e, 3);
 
         int bigNumber = 6;
@@ -43,11 +35,7 @@ public class StackTest {
         stack.pop();
         stack.pop();
         stack.pop();
-<<<<<<< HEAD
-        e = stack.pop();
-=======
         e = (int) stack.pop();
->>>>>>> 8caf3730f68ef24e13da03a7002975901d9c77c4
         assertEquals(e, 1);
 
         assertEquals(stack.isEmpty(), true);
@@ -67,13 +55,9 @@ public class StackTest {
         assertEquals((int) stack.maxElement(), bigNumber);
 
         stack.pop();
-<<<<<<< HEAD
-        stack.pop();
-=======
         assertEquals((int) stack.maxElement(), 4);
         stack.pop();
         assertEquals((int) stack.maxElement(), 4);
->>>>>>> 8caf3730f68ef24e13da03a7002975901d9c77c4
         stack.pop();
         assertEquals((int) stack.maxElement(), 1);
     }

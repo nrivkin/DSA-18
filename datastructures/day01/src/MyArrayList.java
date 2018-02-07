@@ -1,5 +1,4 @@
 public class MyArrayList {
-<<<<<<< HEAD
     // better to use <E>, general purpose
     // in Cow should override hashcode - any time you override equals you should also override hashcode
     private Cow[] elems;
@@ -66,46 +65,5 @@ public class MyArrayList {
             elems[i] = elems[i-1];
         }
         elems[index] = c;
-=======
-    private Cow[] elems;
-    private int size;
-
-    // TODO: Runtime: O(?)
-    public MyArrayList() {
-        // TODO
-    }
-
-    // TODO: Runtime: O(?)
-    public MyArrayList(int capacity) {
-        // TODO
-    }
-
-    // TODO: Runtime: O(?)
-    public void add(Cow c) {
-        // TODO
-    }
-
-    // TODO: Runtime: O(?)
-    public int size() {
-        // TODO
-        return -1;
-    }
-
-    // TODO: Runtime: O(?)
-    public Cow get(int index) {
-        // TODO
-        return null;
-    }
-
-    // TODO: Runtime: O(?)
-    public Cow remove(int index) {
-        // TODO
-        return null;
-    }
-
-    // TODO: Runtime: O(?)
-    public void add(int index, Cow c) {
-        // TODO
->>>>>>> 8caf3730f68ef24e13da03a7002975901d9c77c4
     }
 }

@@ -1,13 +1,8 @@
 import ADTs.QueueADT;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-<<<<<<< HEAD
 import day02.src.your_code.MyPriorityQueue;
 import day02.src.your_code.MyQueue;
-=======
-import your_code.MyPriorityQueue;
-import your_code.MyQueue;
->>>>>>> 8caf3730f68ef24e13da03a7002975901d9c77c4
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
