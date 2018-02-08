@@ -11,45 +11,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Problems.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/day03/src/Problems.java">
+      <file leaf-file-name="MyHashMap.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day04/src/MyHashMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="91" column="39" lean-forward="false" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
+            <state relative-caret-position="68">
+              <caret line="121" column="7" lean-forward="true" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
+              <folding>
+                <element signature="e#617#618#0" expanded="true" />
+                <element signature="e#657#658#0" expanded="true" />
+                <element signature="e#1331#1332#0" expanded="true" />
+                <element signature="e#1394#1395#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyHashMapTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day04/test/MyHashMapTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InfixToPostfixWithParensTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day03/test/InfixToPostfixWithParensTest.java">
+      <file leaf-file-name="SillyString.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day04/src/SillyString.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-              <folding>
-                <element signature="e#241#242#0" expanded="true" />
-                <element signature="e#316#317#0" expanded="true" />
-                <element signature="e#370#371#0" expanded="true" />
-                <element signature="e#457#458#0" expanded="true" />
-                <element signature="e#513#514#0" expanded="true" />
-                <element signature="e#600#601#0" expanded="true" />
-                <element signature="e#655#656#0" expanded="true" />
-                <element signature="e#742#743#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InfixToPostfixNoParensTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day03/test/InfixToPostfixNoParensTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#364#365#0" expanded="true" />
-                <element signature="e#443#444#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="468">
+              <caret line="39" column="46" lean-forward="true" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,6 +71,9 @@
         <option value="$PROJECT_DIR$/day02/test/StackTest.java" />
         <option value="$PROJECT_DIR$/day01/src/MyArrayList.java" />
         <option value="$PROJECT_DIR$/day03/src/Problems.java" />
+        <option value="$PROJECT_DIR$/day04/test/MyHashMapTest.java" />
+        <option value="$PROJECT_DIR$/day04/src/SillyString.java" />
+        <option value="$PROJECT_DIR$/day04/src/MyHashMap.java" />
       </list>
     </option>
   </component>
@@ -113,53 +108,18 @@
             <path>
               <item name="datastructures" type="b2602c69:ProjectViewProjectNode" />
               <item name="datastructures" type="462c0819:PsiDirectoryNode" />
-              <item name="day01" type="462c0819:PsiDirectoryNode" />
+              <item name="day04" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="datastructures" type="b2602c69:ProjectViewProjectNode" />
               <item name="datastructures" type="462c0819:PsiDirectoryNode" />
-              <item name="day01" type="462c0819:PsiDirectoryNode" />
+              <item name="day04" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="datastructures" type="b2602c69:ProjectViewProjectNode" />
               <item name="datastructures" type="462c0819:PsiDirectoryNode" />
-              <item name="day02" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="datastructures" type="b2602c69:ProjectViewProjectNode" />
-              <item name="datastructures" type="462c0819:PsiDirectoryNode" />
-              <item name="day02" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="datastructures" type="b2602c69:ProjectViewProjectNode" />
-              <item name="datastructures" type="462c0819:PsiDirectoryNode" />
-              <item name="day02" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="your_code" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="datastructures" type="b2602c69:ProjectViewProjectNode" />
-              <item name="datastructures" type="462c0819:PsiDirectoryNode" />
-              <item name="day02" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="datastructures" type="b2602c69:ProjectViewProjectNode" />
-              <item name="datastructures" type="462c0819:PsiDirectoryNode" />
-              <item name="day03" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="datastructures" type="b2602c69:ProjectViewProjectNode" />
-              <item name="datastructures" type="462c0819:PsiDirectoryNode" />
-              <item name="day03" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="datastructures" type="b2602c69:ProjectViewProjectNode" />
-              <item name="datastructures" type="462c0819:PsiDirectoryNode" />
-              <item name="day03" type="462c0819:PsiDirectoryNode" />
+              <item name="day04" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -171,8 +131,8 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -209,13 +169,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.InfixToPostfixWithParensTest">
+  <component name="RunManager" selected="Application.SillyString">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
+    </configuration>
+    <configuration name="SillyString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="day04.src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="day04.src.SillyString" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="datastructures" />
+      <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -245,56 +224,6 @@
       <option name="MAIN_CLASS_NAME" value="day03.test.InfixToPostfixWithParensTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="IsPalindromeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="day03.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="datastructures" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="9.0" />
-      <option name="PACKAGE_NAME" value="day03.test" />
-      <option name="MAIN_CLASS_NAME" value="day03.test.IsPalindromeTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="IsPalindromeTest.isPalindrome6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="day03.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="datastructures" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="9.0" />
-      <option name="PACKAGE_NAME" value="day03.test" />
-      <option name="MAIN_CLASS_NAME" value="day03.test.IsPalindromeTest" />
-      <option name="METHOD_NAME" value="isPalindrome6" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
@@ -346,18 +275,18 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="RemoveKDigitsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyHashMapTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="day03.test.*" />
+          <option name="PATTERN" value="day04.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="datastructures" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="9.0" />
-      <option name="PACKAGE_NAME" value="day03.test" />
-      <option name="MAIN_CLASS_NAME" value="day03.test.RemoveKDigitsTest" />
+      <option name="PACKAGE_NAME" value="day04.test" />
+      <option name="MAIN_CLASS_NAME" value="day04.test.MyHashMapTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -371,15 +300,40 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="StackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyHashMapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="datastructures" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="9.0" />
-      <option name="PACKAGE_NAME" value="day02.test" />
-      <option name="MAIN_CLASS_NAME" value="StackTest" />
+      <option name="PACKAGE_NAME" value="day04.test" />
+      <option name="MAIN_CLASS_NAME" value="MyHashMapTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="MyHashMapTest.testResize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="day04.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="datastructures" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="9.0" />
+      <option name="PACKAGE_NAME" value="day04.test" />
+      <option name="MAIN_CLASS_NAME" value="day04.test.MyHashMapTest" />
+      <option name="METHOD_NAME" value="testResize" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
@@ -453,19 +407,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JUnit.MyArrayListTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.StackTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.RemoveKDigitsTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.IsPalindromeTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.IsPalindromeTest.isPalindrome6" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.InfixToPostfixWithParensTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.InfixToPostfixWithParensTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.MyHashMapTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.MyHashMapTest (1)" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.MyHashMapTest.testResize" />
+      <item index="5" class="java.lang.String" itemvalue="Application.SillyString" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.InfixToPostfixWithParensTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.RemoveKDigitsTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.IsPalindromeTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.IsPalindromeTest.isPalindrome6" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.StackTest" />
+        <item index="0" class="java.lang.String" itemvalue="Application.SillyString" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.MyHashMapTest (1)" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.MyHashMapTest.testResize" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.MyHashMapTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.InfixToPostfixWithParensTest" />
       </list>
     </recent_temporary>
   </component>
@@ -486,40 +440,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InfixToPostfixWithParensTest - 2018.02.05 at 20h 49m 47s.xml">
-      <configuration name="InfixToPostfixWithParensTest" configurationId="JUnit" />
+    <history-entry file="MyHashMapTest_(1) - 2018.02.08 at 12h 02m 05s.xml">
+      <configuration name="MyHashMapTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InfixToPostfixWithParensTest - 2018.02.05 at 20h 50m 52s.xml">
-      <configuration name="InfixToPostfixWithParensTest" configurationId="JUnit" />
+    <history-entry file="MyHashMapTest_testResize - 2018.02.08 at 11h 42m 49s.xml">
+      <configuration name="MyHashMapTest.testResize" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InfixToPostfixWithParensTest - 2018.02.05 at 20h 51m 58s.xml">
-      <configuration name="InfixToPostfixWithParensTest" configurationId="JUnit" />
+    <history-entry file="MyHashMapTest_testResize - 2018.02.08 at 11h 44m 21s.xml">
+      <configuration name="MyHashMapTest.testResize" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InfixToPostfixWithParensTest - 2018.02.05 at 20h 52m 59s.xml">
-      <configuration name="InfixToPostfixWithParensTest" configurationId="JUnit" />
+    <history-entry file="MyHashMapTest_testResize - 2018.02.08 at 11h 45m 23s.xml">
+      <configuration name="MyHashMapTest.testResize" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InfixToPostfixWithParensTest - 2018.02.05 at 20h 53m 08s.xml">
-      <configuration name="InfixToPostfixWithParensTest" configurationId="JUnit" />
+    <history-entry file="MyHashMapTest_testResize - 2018.02.08 at 11h 45m 41s.xml">
+      <configuration name="MyHashMapTest.testResize" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InfixToPostfixWithParensTest - 2018.02.05 at 21h 00m 00s.xml">
-      <configuration name="InfixToPostfixWithParensTest" configurationId="JUnit" />
+    <history-entry file="MyHashMapTest_testResize - 2018.02.08 at 11h 48m 10s.xml">
+      <configuration name="MyHashMapTest.testResize" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InfixToPostfixWithParensTest - 2018.02.05 at 21h 06m 12s.xml">
-      <configuration name="InfixToPostfixWithParensTest" configurationId="JUnit" />
+    <history-entry file="MyHashMapTest_testResize - 2018.02.08 at 11h 48m 32s.xml">
+      <configuration name="MyHashMapTest.testResize" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IsPalindromeTest - 2018.02.05 at 21h 06m 23s.xml">
-      <configuration name="IsPalindromeTest" configurationId="JUnit" />
+    <history-entry file="MyHashMapTest_testResize - 2018.02.08 at 11h 59m 29s.xml">
+      <configuration name="MyHashMapTest.testResize" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RemoveKDigitsTest - 2018.02.05 at 21h 06m 32s.xml">
-      <configuration name="RemoveKDigitsTest" configurationId="JUnit" />
+    <history-entry file="MyHashMapTest_testResize - 2018.02.08 at 11h 59m 39s.xml">
+      <configuration name="MyHashMapTest.testResize" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RemoveKDigitsTest - 2018.02.05 at 21h 15m 17s.xml">
-      <configuration name="RemoveKDigitsTest" configurationId="JUnit" />
+    <history-entry file="MyHashMapTest_testResize - 2018.02.08 at 12h 01m 48s.xml">
+      <configuration name="MyHashMapTest.testResize" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1857" height="1085" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -527,11 +480,11 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5018868" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -574,33 +527,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="80" />
+      <option name="time" value="92" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/day02/test/StackTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day02/src/your_code/MyLinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1278">
-          <caret line="71" column="15" lean-forward="true" selection-start-line="71" selection-start-column="15" selection-end-line="71" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day02/test/MyLinkedListTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day02/src/your_code/MyPriorityQueue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -647,7 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1170">
           <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -858,7 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="48" column="36" lean-forward="false" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -901,9 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -918,53 +844,56 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
           <caret line="58" column="5" lean-forward="false" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-          <folding>
-            <element signature="e#604#605#0" expanded="false" />
-            <element signature="e#680#681#0" expanded="false" />
-            <element signature="e#725#726#0" expanded="false" />
-            <element signature="e#802#803#0" expanded="false" />
-            <element signature="e#847#848#0" expanded="false" />
-            <element signature="e#927#928#0" expanded="false" />
-            <element signature="e#1100#1101#0" expanded="false" />
-            <element signature="e#1186#1187#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day03/test/InfixToPostfixNoParensTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#364#365#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day03/test/InfixToPostfixWithParensTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-          <folding>
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#370#371#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#742#743#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day03/src/Problems.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="91" column="39" lean-forward="false" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
+        <state relative-caret-position="298">
+          <caret line="86" column="51" lean-forward="true" selection-start-line="86" selection-start-column="51" selection-end-line="86" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day03/test/InfixToPostfixWithParensTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day03/test/InfixToPostfixNoParensTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day04/src/SillyString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="39" column="46" lean-forward="true" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day04/test/MyHashMapTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day04/src/MyHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="121" column="7" lean-forward="true" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
+          <folding>
+            <element signature="e#617#618#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#1331#1332#0" expanded="true" />
+            <element signature="e#1394#1395#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
