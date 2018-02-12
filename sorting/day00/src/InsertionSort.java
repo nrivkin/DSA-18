@@ -4,15 +4,25 @@ public class InsertionSort extends SortAlgorithm {
      * Use the insertion sort algorithm to sort the array
      *
      * TODO
-     * Best-case runtime:
-     * Worst-case runtime:
-     * Average-case runtime:
+     * Best-case runtime: O(n)
+     * Worst-case runtime: O(n^2)
+     * Average-case runtime: O(n^2)
      *
-     * Space-complexity:
+     * Space-complexity: O(N)
      */
     @Override
     public int[] sort(int[] array) {
-        // TODO
-        return new int[0];
+        int curr = 1;
+        int i = 1;
+        while (curr < array.length){
+            if(array[i-1] > array[i]){
+                swap(array, i, i-1);
+                if (i > 1) i--;
+            } else {
+                curr++;
+                i = curr;
+            }
+        }
+        return array;
     }
 }
