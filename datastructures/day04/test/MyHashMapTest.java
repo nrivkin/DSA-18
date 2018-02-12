@@ -1,4 +1,6 @@
+package day04.test;
 
+import day04.src.MyHashMap;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

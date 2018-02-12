@@ -1,3 +1,6 @@
+package day03.test;
+
+import day03.src.Problems;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

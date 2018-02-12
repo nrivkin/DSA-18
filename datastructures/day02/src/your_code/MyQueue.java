@@ -1,4 +1,4 @@
-package your_code;
+package day02.src.your_code;
 
 import ADTs.QueueADT;
 
