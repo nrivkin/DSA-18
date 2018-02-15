@@ -8,7 +8,7 @@ public class InsertionSort extends SortAlgorithm {
      * Worst-case runtime: O(n^2)
      * Average-case runtime: O(n^2)
      *
-     * Space-complexity: O(N)
+     * Space-complexity: O(1)
      */
     @Override
     public int[] sort(int[] array) {
