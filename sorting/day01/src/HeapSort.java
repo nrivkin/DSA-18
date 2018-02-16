@@ -18,8 +18,54 @@ public class HeapSort extends SortAlgorithm {
     // Corrects the position of element indexed i by sinking it.
     // Use either recursion or a loop to then sink the child
     public void sink(int i) {
-        // TODO
+        if (leftChild(i) < size && (rightChild(i) < size )){
+            int choice = heap[rightChild(i)] < heap[leftChild(i)] ? leftChild(i) : rightChild(i);
+            if (heap[i] < heap[choice]) {
+                swap(heap, i, choice);
+                sink(choice);
+            }
+            return;
+        }
+        if (leftChild(i) < size){
+            if (heap[i] < heap[leftChild(i)]){
+                swap(heap, i, leftChild(i));
+                sink(leftChild(i));
+                return;
+            }
+        }
+        if (rightChild(i) < size ){
+            if (heap[i] < heap[rightChild(i)]){
+                swap(heap, i, rightChild(i));
+                sink(rightChild(i));
+            }
+        }
     }
+
+
+    // overload sink to exclude end section of the heap (so can be left sorted)
+    private void sink(int i, int len) {
+        if (leftChild(i) < len && (rightChild(i) < len )){
+            int choice = heap[leftChild(i)] < heap[rightChild(i)] ? leftChild(i) : rightChild(i);
+            if (heap[i] < heap[choice]) {
+                swap(heap, i, choice);
+                sink(choice, len);
+            }
+        }
+        if (leftChild(i) < len){
+            if (heap[i] < heap[leftChild(i)]){
+                swap(heap, i, leftChild(i));
+                sink(leftChild(i), len);
+                return;
+            }
+        }
+        if (rightChild(i) < len ){
+            if (heap[i] < heap[rightChild(i)]){
+                swap(heap, i, rightChild(i));
+                sink(rightChild(i), len);
+            }
+        }
+    }
+
 
     // Given the array, build a heap by correcting every non-leaf's position, starting from the bottom, then
     // progressing upward
@@ -28,8 +74,9 @@ public class HeapSort extends SortAlgorithm {
         this.size = array.length;
 
         for (int i=this.size / 2 - 1; i>=0; i--) {
-            // TODO
+            sink(i);
         }
+        sink(0);
     }
 
     /**
@@ -42,11 +89,10 @@ public class HeapSort extends SortAlgorithm {
     @Override
     public int[] sort(int[] array) {
         heapify(array);
-
         for (int i=size-1; i>0; i--) {
-            // TODO
+            swap(heap, i, 0);
+            sink(0,i);
         }
-
         return heap;
     }
 }
