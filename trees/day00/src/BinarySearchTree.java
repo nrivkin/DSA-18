@@ -1,3 +1,5 @@
+import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
 import java.util.List;
 
 public class BinarySearchTree<T extends Comparable<T>> {
@@ -28,8 +30,15 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     public List<T> inOrderTraversal() {
-        // TODO
-        return null;
+        if (size == 0) return new ArrayList<>();
+        TreeNode<T> curr = root;
+        while(curr.hasLeftChild()) curr = curr.leftChild;
+        List<T> inOrder = new ArrayList<>();
+        while(curr != null){
+            inOrder.add(curr.key);
+            curr = findSuccessor(curr);
+        }
+        return inOrder;
     }
 
     /**
@@ -66,8 +75,9 @@ public class BinarySearchTree<T extends Comparable<T>> {
             replacement = (n.hasRightChild()) ? n.rightChild : n.leftChild; // replacement is the non-null child
         else {
             // Case 3: two children
-            // TODO
-            replacement = null;
+            n.key = findSuccessor(n).key;
+            delete(findSuccessor(n));
+            return n;
         }
 
         // Put the replacement in its correct place, and set the parent.
@@ -96,13 +106,31 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     private TreeNode<T> findPredecessor(TreeNode<T> n) {
-        // TODO
-        return null;
+        if (n.hasLeftChild()){
+            n = n.leftChild;
+            while (n.hasRightChild()) n = n.rightChild;
+            return n;
+        }
+        TreeNode<T> prev = n.parent;
+        while (prev != null && n == prev.leftChild){
+            n = prev;
+            prev = n.parent;
+        }
+        return prev;
     }
 
     private TreeNode<T> findSuccessor(TreeNode<T> n) {
-        // TODO
-        return null;
+        if (n.hasRightChild()){
+            n = n.rightChild;
+            while (n.hasLeftChild()) n = n.leftChild;
+            return n;
+        }
+        TreeNode<T> next = n.parent;
+        while (next != null && n == next.rightChild){
+            n = next;
+            next = n.parent;
+        }
+        return next;
     }
 
     /**
