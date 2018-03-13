@@ -28,19 +28,28 @@ public class RedBlackTree<T extends Comparable<T>> extends BinarySearchTree<T> {
 
     // make a left-leaning link lean to the right
     TreeNode<T> rotateRight(TreeNode<T> h) {
-        // TODO
-        return h;
+        TreeNode<T> left = h.leftChild;
+        TreeNode<T> leftRight = left.rightChild;
+        left.rightChild = h;
+        h.leftChild = leftRight;
+        return left;
     }
 
     // make a right-leaning link lean to the left
     TreeNode<T> rotateLeft(TreeNode<T> h) {
-        // TODO
-        return h;
+        TreeNode<T> right = h.rightChild;
+        TreeNode<T> rightLeft = right.leftChild;
+        right.leftChild = h;
+        h.rightChild = rightLeft;
+        return right;
     }
 
     // flip the colors of a TreeNode and its two children
     TreeNode<T> flipColors(TreeNode<T> h) {
-        // TODO
+        boolean temp = h.color;
+        h.color = h.rightChild.color;
+        h.rightChild.color = temp;
+        h.leftChild.color = temp;
         return h;
     }
 
@@ -53,7 +62,21 @@ public class RedBlackTree<T extends Comparable<T>> extends BinarySearchTree<T> {
      * return balanced node
      */
     private TreeNode<T> balance(TreeNode<T> h) {
-        // TODO
+        if (isRed(h.leftChild)){
+            if (isRed(h.leftChild.leftChild)) {
+                h = rotateRight(h);
+                h.color = h.rightChild.color;
+                h.rightChild.color = RED;
+            }
+        }
+        if (isRed(h.rightChild) && isRed(h.leftChild)) {
+            h = flipColors(h);
+        }
+        if (isRed(h.rightChild)) {
+            h = rotateLeft(h);
+            h.color = h.leftChild.color;
+            h.leftChild.color = RED;
+        }
         return h;
     }
 
@@ -65,7 +88,7 @@ public class RedBlackTree<T extends Comparable<T>> extends BinarySearchTree<T> {
     @Override
     TreeNode<T> insert(TreeNode<T> h, T key) {
         h = super.insert(h, key);
-        // TODO: use balance to correct for the three rotation cases
+        h = balance(h);
         return h;
     }
 
