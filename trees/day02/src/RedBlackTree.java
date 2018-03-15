@@ -83,7 +83,7 @@ public class RedBlackTree<T extends Comparable<T>> extends BinarySearchTree<T> {
 
     /**
      * Recursively insert a new node into the BST
-     * Runtime: TODO
+     * Runtime: O(log(n))
      */
     @Override
     TreeNode<T> insert(TreeNode<T> h, T key) {
