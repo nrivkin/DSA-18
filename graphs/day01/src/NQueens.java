@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class NQueens {
 
@@ -50,9 +52,33 @@ public class NQueens {
 
 
     public static List<char[][]> nQueensSolutions(int n) {
-        // TODO
         List<char[][]> answers = new ArrayList<>();
+        char[][] board = new char[n][n];
+        for(int r = 0; r < n; r++){
+            for(int c = 0; c < n; c++){
+                board[r][c] = '.';
+            }
+        }
+        Set<Integer> columns = new HashSet<>();
+        for(int i = 0; i < n; i++) columns.add(i);
+        placeQueens(0, columns, board, answers);
         return answers;
     }
 
+    private static void placeQueens(int row, Set<Integer> columns, char[][] board, List<char[][]> answers){
+        if(columns.isEmpty()) {
+            answers.add(copyOf(board));
+        } else{
+            Set<Integer> temp = new HashSet<>(columns);
+            for(int column: temp){
+                if(!checkDiagonal(board, row, column)){
+                    columns.remove(column);
+                    board[row][column] = 'Q';
+                    placeQueens(row + 1, columns, board, answers);
+                    board[row][column] = '.';
+                    columns.add(column);
+                }
+            }
+        }
+    }
 }
