@@ -189,9 +189,13 @@ public class RubiksCube {
 
     public int maxManhattan(BitSet state){
         // TODO
-        return -1;
+        return 0;
     }
 
+    public Iterable<BitSet> neighbors(){
+        // TODO
+        return null;
+    }
 
     // return the list of rotations needed to solve a rubik's cube
     public List<Character> solve() {
