@@ -187,6 +187,11 @@ public class RubiksCube {
         return listTurns;
     }
 
+    public int maxManhattan(BitSet state){
+        // TODO
+        return -1;
+    }
+
 
     // return the list of rotations needed to solve a rubik's cube
     public List<Character> solve() {
