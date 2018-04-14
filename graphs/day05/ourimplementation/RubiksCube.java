@@ -1,12 +1,13 @@
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
-
 // this is our implementation of a rubiks cube. It is your job to use A* or some other search algorithm to write a
 // solve() function
 public class RubiksCube {
 
     private BitSet cube;
+    private HashMap<BitSet, Integer> map;
+
 
     // initialize a solved rubiks cube
     public RubiksCube() {
@@ -53,8 +54,8 @@ public class RubiksCube {
             this.rotation = rotation;
         }
 
-        public void maxmanhattan(){
-            cost = moves + maxManhattan(rCube.cube);
+        public void maxmanhattan(){ //should be renamed if new method used
+            cost = moves + map.get(rCube.cube);//maxManhattan(rCube.cube);
         }
 
         @Override
@@ -229,10 +230,31 @@ public class RubiksCube {
         return listTurns;
     }
 
-    public int maxManhattan(BitSet state){
-        // TODO
-        return 0;
+    public HashMap<BitSet, Integer> generateMap() {
+        HashMap<BitSet, Integer> map = new HashMap<>();
+        Queue<RubiksCube> open = new LinkedList<>();
+
+        RubiksCube solvedCube = new RubiksCube();
+        open.add(solvedCube);
+        map.put(solvedCube.cube, 0);
+        int max_depth = 10;
+        while (!open.isEmpty()) {
+            RubiksCube cube = open.poll();
+            Integer solvedist = map.get(cube.cube) + 1;
+            if (solvedist > max_depth) {
+                break;
+            }
+            for (char c : neighbors()) {
+                RubiksCube newCube = cube.rotate(c);
+                if (!map.containsKey(newCube.cube)) {
+                    map.put(newCube.cube, solvedist);
+                    open.add(newCube);
+                }
+            }
+        }
+        return map;
     }
+
 
     public Iterable<Character> neighbors(){
         List<Character> rotations = new ArrayList<>();
@@ -247,6 +269,7 @@ public class RubiksCube {
 
     // return the list of rotations needed to solve a rubik's cube
     public List<Character> solve() {
+        map = generateMap();
         PriorityQueue<State> open = new PriorityQueue<>(new CostSort());
         Set<RubiksCube> openSet = new HashSet<>();
         HashMap<RubiksCube, Integer> visited = new HashMap<>();
@@ -289,6 +312,11 @@ public class RubiksCube {
             closed.add(currState.rCube);
         }
         return null;
+    }
+
+    public void main(String[] args) {
+        System.out.println("ran");
+        map = generateMap();
     }
 
 }
