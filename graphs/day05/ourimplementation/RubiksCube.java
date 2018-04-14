@@ -38,6 +38,48 @@ public class RubiksCube {
         return other.cube.equals(cube);
     }
 
+    private class State {
+        // Each state needs to keep track of its cost and the previous state
+        private RubiksCube rCube;
+        private int moves; // equal to g-cost in A*
+        private int cost; // equal to f-cost in A*
+        private State prev;
+        private Character rotation;
+
+        public State(RubiksCube cube, int moves, State prev, Character rotation) {
+            this.rCube = cube;
+            this.moves = moves;
+            this.prev = prev;
+            this.rotation = rotation;
+        }
+
+        public void maxmanhattan(){
+            cost = moves + maxManhattan(rCube.cube);
+        }
+
+        @Override
+        public boolean equals(Object s) {
+            if (s == this) return true;
+            if (s == null) return false;
+            if (!(s instanceof State)) return false;
+            return ((State) s).rCube.equals(this.rCube);
+        }
+
+        @Override
+        public int hashCode(){
+            return rCube.hashCode();
+        }
+    }
+
+    class CostSort implements Comparator<State>
+    {
+        // Used for sorting in descending order of cost
+        public int compare(State a, State b)
+        {
+            return a.cost - b.cost;
+        }
+    }
+
     /**
      * return a hashCode for this rubik's cube.
      *
@@ -192,15 +234,61 @@ public class RubiksCube {
         return 0;
     }
 
-    public Iterable<BitSet> neighbors(){
-        // TODO
-        return null;
+    public Iterable<Character> neighbors(){
+        List<Character> rotations = new ArrayList<>();
+        rotations.add('r');
+        rotations.add('u');
+        rotations.add('f');
+        rotations.add('R');
+        rotations.add('U');
+        rotations.add('F');
+        return rotations;
     }
 
     // return the list of rotations needed to solve a rubik's cube
     public List<Character> solve() {
-        // TODO
-        return new ArrayList<>();
+        PriorityQueue<State> open = new PriorityQueue<>(new CostSort());
+        Set<RubiksCube> openSet = new HashSet<>();
+        HashMap<RubiksCube, Integer> visited = new HashMap<>();
+        State initialState = new State(new RubiksCube(cube), 0, null, null);
+        open.add(initialState);
+        Set<RubiksCube> closed = new HashSet<>();
+        while (open.size() > 0) {
+            State currState = open.poll(); // Get state with lowest cost
+            if(currState.rCube.isSolved()){
+                List<Character> solution = new ArrayList<>();
+                State temp = currState;
+                while (temp.prev != null){
+                    solution.add(temp.rotation);
+                    temp = temp.prev;
+                }
+                return solution;
+            }
+            for(Character c : neighbors()){
+                RubiksCube nr = new RubiksCube(cube);
+                nr.rotate(c);
+                State ns = new State(nr, currState.moves + 1, currState, c);
+                visited.put(ns.rCube, ns.moves);
+                boolean ignore = false;
+                if(openSet.contains(nr)){
+                    if(visited.get(nr) < ns.moves) {
+                        ignore = true;
+                    }
+                }
+                if(closed.contains(nr)){
+                    if(visited.get(nr) < ns.moves) {
+                        ignore = true;
+                    }
+                }
+                if(!ignore){
+                    ns.maxmanhattan();
+                    openSet.add(ns.rCube);
+                    open.add(ns);
+                }
+            }
+            closed.add(currState.rCube);
+        }
+        return null;
     }
 
 }
