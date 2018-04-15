@@ -54,7 +54,7 @@ public class RubiksCube {
             this.rotation = rotation;
         }
 
-        public void maxmanhattan(){ //should be renamed if new method used
+        public void getDist(){//maxmanhattan(){ //should be renamed if new method used
             cost = moves + map.get(rCube.cube);//maxManhattan(rCube.cube);
         }
 
@@ -237,9 +237,12 @@ public class RubiksCube {
         RubiksCube solvedCube = new RubiksCube();
         open.add(solvedCube);
         map.put(solvedCube.cube, 0);
-        int max_depth = 10;
+        int max_depth = 15;
         while (!open.isEmpty()) {
             RubiksCube cube = open.poll();
+            if (map.containsKey(cube.cube)) {
+                continue;
+            }
             Integer solvedist = map.get(cube.cube) + 1;
             if (solvedist > max_depth) {
                 break;
@@ -270,6 +273,7 @@ public class RubiksCube {
     // return the list of rotations needed to solve a rubik's cube
     public List<Character> solve() {
         map = generateMap();
+        System.out.println(map);
         PriorityQueue<State> open = new PriorityQueue<>(new CostSort());
         Set<RubiksCube> openSet = new HashSet<>();
         HashMap<RubiksCube, Integer> visited = new HashMap<>();
@@ -304,7 +308,7 @@ public class RubiksCube {
                     }
                 }
                 if(!ignore){
-                    ns.maxmanhattan();
+                    ns.getDist();
                     openSet.add(ns.rCube);
                     open.add(ns);
                 }
