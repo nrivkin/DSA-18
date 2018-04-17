@@ -43,7 +43,7 @@ public class RubiksCube {
         // Each state needs to keep track of its cost and the previous state
         private RubiksCube rCube;
         private int moves; // equal to g-cost in A*
-        private int cost; // equal to f-cost in A*
+        private double cost; // equal to f-cost in A*
         private State prev;
         private Character rotation;
 
@@ -55,7 +55,7 @@ public class RubiksCube {
         }
 
         public void getDist(){//maxmanhattan(){ //should be renamed if new method used
-            cost = moves + map.get(rCube.cube);//maxManhattan(rCube.cube);
+            cost = moves + threedmanhattandist(rCube.cube);//maxManhattan(rCube.cube);
         }
 
         @Override
@@ -77,7 +77,7 @@ public class RubiksCube {
         // Used for sorting in descending order of cost
         public int compare(State a, State b)
         {
-            return a.cost - b.cost;
+            return (int) (a.cost - b.cost);
         }
     }
 
@@ -129,7 +129,7 @@ public class RubiksCube {
 
 
     // index from 0-23, returns a number from 0-5
-    private int getColor(int index) {
+    private int getColor(int index, BitSet cube) {
         return bitsetToInt(cube.get(index * 3, (index + 1) * 3));
     }
 
@@ -188,8 +188,8 @@ public class RubiksCube {
             sidesTo = temp;
         }
         RubiksCube res = new RubiksCube(cube);
-        for (int i = 0; i < faceFrom.length; i++) res.setColor(faceTo[i], this.getColor(faceFrom[i]));
-        for (int i = 0; i < sidesFrom.length; i++) res.setColor(sidesTo[i], this.getColor(sidesFrom[i]));
+        for (int i = 0; i < faceFrom.length; i++) res.setColor(faceTo[i], this.getColor(faceFrom[i], cube));
+        for (int i = 0; i < sidesFrom.length; i++) res.setColor(sidesTo[i], this.getColor(sidesFrom[i], cube));
         return res;
     }
 
@@ -230,22 +230,51 @@ public class RubiksCube {
         return listTurns;
     }
 
+    public double threedmanhattandist(BitSet cube) {
+        Queue<RubiksCube> open = new LinkedList<>();
+        int[][] corners = {{0, 21, 16}, {1, 9, 17}, {2, 5, 8},  {3, 4, 20}, {10, 13, 18}, {6, 11, 14}, {7, 15, 23}, {12, 22, 19}};
+        RubiksCube solvedCube = new RubiksCube();
+        int[][] solved_corners = new int[8][3];
+        //System.out.println("here");
+
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 3; j++) {
+                solved_corners[i][j] = getColor(corners[i][j], solvedCube.cube);
+                //System.out.println(solved_corners[i][j]);
+                System.out.println(getColor(corners[i][j], cube));
+            }
+        }
+        //System.out.println(solved_corners);
+
+        //System.out.println("made it here");
+        int maxsum = 0;
+        for (int i = 0; i < 8; i++) {
+            int sum = 0;
+            for (int j = 0; j < 3; j++) {
+                sum += Math.abs(getColor(corners[i][j], cube) - solved_corners[i][j]);
+            }
+            if (sum > maxsum) {
+                maxsum = sum;
+            }
+        }
+        return maxsum/15.0;
+    }
+
+/*
     public HashMap<BitSet, Integer> generateMap() {
         HashMap<BitSet, Integer> map = new HashMap<>();
         Queue<RubiksCube> open = new LinkedList<>();
 
         RubiksCube solvedCube = new RubiksCube();
+
         open.add(solvedCube);
         map.put(solvedCube.cube, 0);
         int max_depth = 15;
         while (!open.isEmpty()) {
             RubiksCube cube = open.poll();
-            if (map.containsKey(cube.cube)) {
-                continue;
-            }
             Integer solvedist = map.get(cube.cube) + 1;
             if (solvedist > max_depth) {
-                break;
+                continue;
             }
             for (char c : neighbors()) {
                 RubiksCube newCube = cube.rotate(c);
@@ -257,7 +286,7 @@ public class RubiksCube {
         }
         return map;
     }
-
+*/
 
     public Iterable<Character> neighbors(){
         List<Character> rotations = new ArrayList<>();
@@ -272,8 +301,8 @@ public class RubiksCube {
 
     // return the list of rotations needed to solve a rubik's cube
     public List<Character> solve() {
-        map = generateMap();
-        System.out.println(map);
+        //map = generateMap();
+        //System.out.println(map);
         PriorityQueue<State> open = new PriorityQueue<>(new CostSort());
         Set<RubiksCube> openSet = new HashSet<>();
         HashMap<RubiksCube, Integer> visited = new HashMap<>();
