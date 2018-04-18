@@ -55,7 +55,7 @@ public class RubiksCube {
         }
 
         public void getDist(){//maxmanhattan(){ //should be renamed if new method used
-            cost = moves + threedmanhattandist(rCube.cube);//maxManhattan(rCube.cube);
+            cost = moves;// + threeDManhattanDist(rCube.cube);//maxManhattan(rCube.cube);
         }
 
         @Override
@@ -230,23 +230,24 @@ public class RubiksCube {
         return listTurns;
     }
 
-    public double threedmanhattandist(BitSet cube) {
+    public double threeDManhattanDist(BitSet cube) {
         Queue<RubiksCube> open = new LinkedList<>();
         int[][] corners = {{0, 21, 16}, {1, 9, 17}, {2, 5, 8},  {3, 4, 20}, {10, 13, 18}, {6, 11, 14}, {7, 15, 23}, {12, 22, 19}};
         RubiksCube solvedCube = new RubiksCube();
         int[][] solved_corners = new int[8][3];
-        //System.out.println("here");
+
+//        System.out.println("here");
 
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 3; j++) {
                 solved_corners[i][j] = getColor(corners[i][j], solvedCube.cube);
                 //System.out.println(solved_corners[i][j]);
-                System.out.println(getColor(corners[i][j], cube));
+//                System.out.println(getColor(corners[i][j], cube));
             }
         }
-        //System.out.println(solved_corners);
-
-        //System.out.println("made it here");
+//        //System.out.println(solved_corners);
+//
+//        //System.out.println("made it here");
         int maxsum = 0;
         for (int i = 0; i < 8; i++) {
             int sum = 0;
@@ -259,34 +260,6 @@ public class RubiksCube {
         }
         return maxsum/15.0;
     }
-
-/*
-    public HashMap<BitSet, Integer> generateMap() {
-        HashMap<BitSet, Integer> map = new HashMap<>();
-        Queue<RubiksCube> open = new LinkedList<>();
-
-        RubiksCube solvedCube = new RubiksCube();
-
-        open.add(solvedCube);
-        map.put(solvedCube.cube, 0);
-        int max_depth = 15;
-        while (!open.isEmpty()) {
-            RubiksCube cube = open.poll();
-            Integer solvedist = map.get(cube.cube) + 1;
-            if (solvedist > max_depth) {
-                continue;
-            }
-            for (char c : neighbors()) {
-                RubiksCube newCube = cube.rotate(c);
-                if (!map.containsKey(newCube.cube)) {
-                    map.put(newCube.cube, solvedist);
-                    open.add(newCube);
-                }
-            }
-        }
-        return map;
-    }
-*/
 
     public Iterable<Character> neighbors(){
         List<Character> rotations = new ArrayList<>();
@@ -315,16 +288,15 @@ public class RubiksCube {
                 List<Character> solution = new ArrayList<>();
                 State temp = currState;
                 while (temp.prev != null){
-                    solution.add(temp.rotation);
+                    solution.add(0, temp.rotation);
                     temp = temp.prev;
                 }
                 return solution;
             }
             for(Character c : neighbors()){
-                RubiksCube nr = new RubiksCube(cube);
-                nr.rotate(c);
+                RubiksCube nr = currState.rCube.rotate(c);
                 State ns = new State(nr, currState.moves + 1, currState, c);
-                visited.put(ns.rCube, ns.moves);
+                visited.put(nr, ns.moves);
                 boolean ignore = false;
                 if(openSet.contains(nr)){
                     if(visited.get(nr) < ns.moves) {
@@ -338,7 +310,7 @@ public class RubiksCube {
                 }
                 if(!ignore){
                     ns.getDist();
-                    openSet.add(ns.rCube);
+                    openSet.add(nr);
                     open.add(ns);
                 }
             }
@@ -349,7 +321,7 @@ public class RubiksCube {
 
     public void main(String[] args) {
         System.out.println("ran");
-        map = generateMap();
+//        map = generateMap();
     }
 
 }
