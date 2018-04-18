@@ -55,7 +55,7 @@ public class RubiksCube {
         }
 
         public void getDist(){//maxmanhattan(){ //should be renamed if new method used
-            cost = moves;// + threeDManhattanDist(rCube.cube);//maxManhattan(rCube.cube);
+            cost = moves + wrongblocks(rCube.cube);//maxManhattan(rCube.cube);
         }
 
         @Override
@@ -230,35 +230,18 @@ public class RubiksCube {
         return listTurns;
     }
 
-    public double threeDManhattanDist(BitSet cube) {
-        Queue<RubiksCube> open = new LinkedList<>();
-        int[][] corners = {{0, 21, 16}, {1, 9, 17}, {2, 5, 8},  {3, 4, 20}, {10, 13, 18}, {6, 11, 14}, {7, 15, 23}, {12, 22, 19}};
+    public double wrongblocks(BitSet cube_new) {
         RubiksCube solvedCube = new RubiksCube();
-        int[][] solved_corners = new int[8][3];
-
-//        System.out.println("here");
-
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 3; j++) {
-                solved_corners[i][j] = getColor(corners[i][j], solvedCube.cube);
-                //System.out.println(solved_corners[i][j]);
-//                System.out.println(getColor(corners[i][j], cube));
+        double misplaced_cubes = 0;
+        for (int side = 0; side < 6; side++) {
+            for (int i = 0; i < 4; i++) {
+                if (getColor(side * 4 + i, cube_new) != getColor(side *4 + i, solvedCube.cube)) {
+                    misplaced_cubes += 1;
+                }
             }
         }
-//        //System.out.println(solved_corners);
-//
-//        //System.out.println("made it here");
-        int maxsum = 0;
-        for (int i = 0; i < 8; i++) {
-            int sum = 0;
-            for (int j = 0; j < 3; j++) {
-                sum += Math.abs(getColor(corners[i][j], cube) - solved_corners[i][j]);
-            }
-            if (sum > maxsum) {
-                maxsum = sum;
-            }
-        }
-        return maxsum/15.0;
+        //System.out.println(misplaced_cubes);
+        return misplaced_cubes/9.0;
     }
 
     public Iterable<Character> neighbors(){
@@ -321,7 +304,6 @@ public class RubiksCube {
 
     public void main(String[] args) {
         System.out.println("ran");
-//        map = generateMap();
     }
 
 }
